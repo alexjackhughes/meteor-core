@@ -1,0 +1,8 @@
+<template name="Login">
+    {{#if currentUser}}
+        <p>You're logged in.</p>
+    {{else}}
+        {{> loginform}}
+        <a href="/register">Register</a>
+    {{/if}}
+</template>

@@ -1,0 +1,21 @@
+<template name="dashboard">
+    <p>You're logged in.</p>
+    <p><a href="#" class="logout">Logout</a></p>
+
+    {{> quickForm collection="Blogs" id="insertBookForm" type="insert"}}
+
+    <h1>My Blogs</h1>
+    {{#each myBlogs}}
+        {{> YourBlogs}}
+    {{/each}}
+</template>
+
+<template name="YourBlogs">
+    <ul class="blog-list">
+        <li>
+            <h3>{{title}}</h3>
+            <p>{{description}}</p>
+            <i class="fa fa-trash"></i>
+        </li>
+    </ul>
+</template>

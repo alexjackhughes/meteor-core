@@ -1,0 +1,17 @@
+<template name="Home">
+  <p>This is the main page.</p>
+
+  <h1 class="page-title">All Blogs</h1>
+  {{#each blogs}}
+      {{> AllBlogsTemplate}}
+  {{/each}}
+</template>
+
+<template name="AllBlogsTemplate">
+    <ul class="blog-list">
+        <li>
+            <h3>{{title}}</h3>
+            <p>{{description}}</p>
+        </li>
+    </ul>
+</template>
